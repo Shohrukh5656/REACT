@@ -40,7 +40,7 @@ function Input() {
                 <div className="item-header">
                     Input
                 </div>
-                <form method="POST" className="app__content" onSubmit={handleSubmit}>
+                <form method="POST" className="item-content" onSubmit={handleSubmit}>
                     <div className="input">
                         <input type="text"
                             value={init?.name || ''}
