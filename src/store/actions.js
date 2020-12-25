@@ -18,11 +18,17 @@ const selectInput = (select, value) => ({
     payload:{select, value}
 });
 
+const resetInput = () => ({
+    type: 'RESET',
+    payload: {}
+})
+
 const actions = {
     nameInput,
     surnameInput,
     dateInput,
     selectInput,
+    resetInput,
 };
 
 export default actions;

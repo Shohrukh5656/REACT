@@ -5,9 +5,8 @@ const initialState = {
     select: '',    
 }
 
-const someReducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     const {value} = action.payload || '';
-    console.log(value);
     switch (action.type) {
         case 'NAME':
             const {name} = action.payload;
@@ -21,9 +20,11 @@ const someReducer = (state = initialState, action) => {
         case 'SELECT':
             const {select} = action.payload;
             return { ...state, [select]: value };
+        case 'RESET':
+            return state = {};
         default:
             break;
     }
 }
 
-export default someReducer
+export default reducer

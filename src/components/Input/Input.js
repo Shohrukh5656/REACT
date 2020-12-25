@@ -9,11 +9,12 @@ function Input() {
     
     const handleSubmit = e => {
         e.preventDefault();
+        e.currentTarget.reset();
+        dis(actions.resetInput());
         console.log(JSON.parse(JSON.stringify(init)));
     }
     
     const handleCheck = e => {
-        console.log(init);
         const {value, name} = e.currentTarget;
 
         switch (name) {
